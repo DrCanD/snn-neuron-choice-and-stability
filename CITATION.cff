@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite the archived Zenodo release corresponding to the version of this software you used."
+type: software
+title: "Neuron Choice and Initialization Stability in SNNs"
+authors:
+  - family-names: "Dikmen"
+    given-names: "İsmail Can"
+  - family-names: "Karadağ"
+    given-names: "Teoman"
+version: 0.1.0
+date-released: 2026-11-16
+url: "https://github.com/DrCanD/snn-neuron-choice-and-stability"
+repository-code: "https://github.com/DrCanD/snn-neuron-choice-and-stability"
+license: MIT
+abstract: >-
+  Experiment runners for comparing spiking-neuron families, heterogeneous banks,
+  input representations, and initialization stability on DIAT-μSAT radar and
+  Spiking Heidelberg Digits. The package provides recorded configurations,
+  pinned source and input fingerprints, numerical results, and model checkpoint
+  generation. Datasets and previously measured results are not bundled.
+  Portable-package validation was performed without new training; an end-to-end
+  GPU rerun of this packaging has not been performed.
+keywords:
+  - spiking neural networks
+  - neuron heterogeneity
+  - initialization stability
+  - radar
+  - Spiking Heidelberg Digits
+  - reproducibility
