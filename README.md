@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.13.16](https://img.shields.io/badge/Python-3.13.16-3776AB.svg)](requirements.txt)
-[![Release](https://img.shields.io/github/v/release/DrCanD/snn-neuron-choice-and-stability)](https://github.com/DrCanD/snn-neuron-choice-and-stability/releases)
+[![Release v0.1.0](https://img.shields.io/badge/release-v0.1.0-2ea44f.svg)](https://github.com/DrCanD/snn-neuron-choice-and-stability/releases/tag/v0.1.0)
 [![DOI](https://zenodo.org/badge/1460193939.svg)](https://doi.org/10.5281/zenodo.24285109)
 
 This repository packages the completed revision experiments on **DIAT-μSAT radar** and **Spiking Heidelberg Digits (SHD)**. A single command-line entry point selects an experiment and seed. Each run writes numerical results, validation histories, predictions, and model checkpoints.
