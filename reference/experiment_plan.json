@@ -1,0 +1,58 @@
+{
+  "campaign": "frozen_reference_diat_20261110_v1",
+  "contract_sha256": "4108c1a50a6dad69ee5ef2ea1373fe678b91123ddfd4939b51369323f94a2f29",
+  "purpose": "Prospective full-data check of the validated original training function with recoverable selected weights on current data; separate descriptive cohort",
+  "fixed_before_results": true,
+  "jobs": [
+    {
+      "id": "doppler_s42",
+      "method": "doppler",
+      "seed": 42
+    },
+    {
+      "id": "bank_stable_s42",
+      "method": "bank_stable",
+      "seed": 42
+    },
+    {
+      "id": "doppler_s123",
+      "method": "doppler",
+      "seed": 123
+    },
+    {
+      "id": "bank_stable_s123",
+      "method": "bank_stable",
+      "seed": 123
+    },
+    {
+      "id": "doppler_s999",
+      "method": "doppler",
+      "seed": 999
+    },
+    {
+      "id": "bank_stable_s999",
+      "method": "bank_stable",
+      "seed": 999
+    }
+  ],
+  "shards": {
+    "worker1": [
+      42
+    ],
+    "worker2": [
+      123
+    ],
+    "worker3": [
+      999
+    ]
+  },
+  "stop_rule": "Complete all six jobs to original validation early-stop/max200; pause on integrity failure. No stopping or adding seeds based on test scores.",
+  "statistics": "Per-seed macro-F1/accuracy, mean and sample SD; paired bank-minus-Doppler differences and t-based confidence interval, explicitly low precision at n=3. No equivalence claim, no newly chosen TOST margin.",
+  "reuse": "Reuse R2 completed controls as separate-protocol results; deduplicate overlapping seeds. Partial 374-run campaign exploratory only.",
+  "not_claimed": [
+    "Historical R1 exact replication",
+    "Causal estimate of loop effect versus historic Blackwell R2",
+    "Independent external dataset replication",
+    "Universal superiority or statistical equivalence"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "files": {
+    "reference_contract.json": "4108c1a50a6dad69ee5ef2ea1373fe678b91123ddfd4939b51369323f94a2f29",
+    "definitions.json": "2aa68a0f45a50543fee200cd43aab13157a22ee479cf0aecb5e02790cd3df28b",
+    "reference_observer.py": "1e9d5e4f71938125d06c92f36bac81412c208b67c8676d541136c7e2106d399d",
+    "experiment_plan.json": "45de72253e62454fb66414784553c1b4eda30606ad657e3c8d4afbd4940fc24c",
+    "run_frozen_reference.py": "d1247c6e758189640868cdfbd00e4c1bb22da0e472d2761bc5b1e68f808cdc8c"
+  }
+}

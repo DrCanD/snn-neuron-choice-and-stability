@@ -1,0 +1,116 @@
+{
+  "version": "current_DIAT_L4_reference_v1",
+  "frozen_at_utc": "2026-11-09T23:37:00.978348+00:00",
+  "status": "FROZEN_SCOPED_REFERENCE",
+  "authorized_training_scope": "DIAT W128 Doppler and stable mixed bank; seeds 42,123,999",
+  "historical_R1_equivalence": false,
+  "R2_new_loop_equivalence": false,
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.4.6",
+    "torch": "2.14.1+cu130",
+    "cuda_runtime": "13.0",
+    "cudnn": 92800,
+    "gpu": "NVIDIA L4",
+    "scikit_learn": "1.6.1",
+    "scipy": "1.16.3",
+    "h5py": "3.14.0"
+  },
+  "flags": {
+    "matmul_tf32": true,
+    "cudnn_tf32": true,
+    "cudnn_benchmark": true,
+    "deterministic_algorithms": false
+  },
+  "data_fingerprint": "e5c5e5b1",
+  "historical_data_fingerprint_unreproduced": "81627fc7",
+  "six_array_hashes": {
+    "X_train": "912db0ba828aba57522725e0738f3853b85495064d328ffb115ba74abee1abb2",
+    "y_train": "404fa3717162a6998e9fbed0528a48a44b4493952dcd26792e76a3a5aa9f52f3",
+    "X_val": "894bf7038fade4554f2dfdbace8bc55e98a0d094edba6d135bd7578b16902e57",
+    "y_val": "ff290f1495882abde0f209c511702288ff8c20c9e0a0899ec2425ff18c68e877",
+    "X_test": "297bf9a93021b90aad1430b3ab12214e85af43239dbe5be5f31fb54f5d683cb3",
+    "y_test": "870c95693d0ac0e470cddfc2d6e93e74319624b4ff32d9c05eafc029e7cf9e76"
+  },
+  "raw_data_sha256": {
+    "X.npy": "1ed9f1f2f3e210430c5078d5da64572fb370ca0bffacd0f8b6385a5356425940",
+    "y.npy": "80fd08b91676035dd13a8f882beb2ae4b910bed96b8641cae17d2f5f16922e6d"
+  },
+  "ntm_commit": "96c2c484c45114afed21c0a7e768d3cba9b3c723",
+  "dsn_commit": "ebab00ac1a177ae08472db87ad5051f0d6ca7ebb",
+  "source_hashes": {
+    "experiments/02_diat_ablation.py": "bc39122be2b5a6437cd1cffa8342e4ed230a49cc2c8067844e3cc0073808f973",
+    "src/mstask/core.py": "69395e65ef80b226fbe19f3faf7c32c0ee974802bf1137419c4d5249f9b5fd9f",
+    "dikmen_neurons/base.py": "140dae1217293de3c82d588c95df73efd9d1ab425686a30acae870de864f893f",
+    "dikmen_neurons/ms_if/__init__.py": "b60adf5df5426197d8cd3c18093f1191c8cd07b341f7f9f35aa129d49ca2a9ba"
+  },
+  "definitions_sha256": "2aa68a0f45a50543fee200cd43aab13157a22ee479cf0aecb5e02790cd3df28b",
+  "observer_sha256": "1e9d5e4f71938125d06c92f36bac81412c208b67c8676d541136c7e2106d399d",
+  "factory_sha256": "16690194e892384d3b62f045164f28a5e033a32066502b738ddd6e9559d2bb7e",
+  "train_one_sha256": "23e51941c7f8a9e9e81fb753240d87895050d8771e41616f44dcd245e016536c",
+  "config": {
+    "L": 4,
+    "W": 128,
+    "norm": "none",
+    "max_epochs": 200,
+    "patience": 20,
+    "val_frac": 0.15,
+    "val_smooth": 5,
+    "select_metric": "macro_f1",
+    "lr": 0.001,
+    "batch_size": 128,
+    "target_firing": 0.15,
+    "rescue_w0": 0.2
+  },
+  "specs": {
+    "doppler": {
+      "arch": "homog",
+      "neuron": "Doppler-LIF",
+      "W": 128
+    },
+    "bank_stable": {
+      "arch": "bank",
+      "w": 51,
+      "paths": [
+        "Doppler-LIF",
+        "Chirp-LIF",
+        "STFT-IF",
+        "Dual-tau-LIF",
+        "CrossInhib-LIF-stable"
+      ]
+    }
+  },
+  "neuron_kwargs": {
+    "STFT-IF": {
+      "window_len": 16
+    }
+  },
+  "loader_contract": {
+    "original_R1_make_loaders": true,
+    "num_workers": 2,
+    "persistent_workers": true,
+    "generator": "global Torch RNG; no explicit private generator",
+    "prewarm": "one discarded batch before train_one reseeding; Python=9001 NumPy=9001 Torch=777",
+    "validation_and_test": "original sequential full datasets every epoch",
+    "prewarm_is_explicit_current_protocol_not_recovered_historical_probe": true
+  },
+  "calibration": {
+    "examples": 128,
+    "target": 0.15,
+    "bisection_iterations": 30,
+    "original_core_no_grad": true
+  },
+  "selection": "unchanged train_one; mean last 5 validation macro-F1; improvement >1e-4; patience20; no test-based choice",
+  "evidence": {
+    "denetim_adim4/evidence/gpu_calibration_r1_audit.json": "5bb6945effbb219690cc2e60340dee0b04a77f13fa11c482c2d2b043223f6f96",
+    "denetim_adim5/evidence/causal_audit.json": "e2645ec1f1c5e4891f151a9a359bac7c2c9a87a7a37f65f8f751371bccba3788",
+    "denetim_adim6/evidence/reference_observer_audit.json": "42d71c3e3e230b157c5f640d12804531f68f3d72af48f5f012f41a368a1a5d97"
+  },
+  "validation_scope": "24 bounded diagnostic updates; 2 epochs x 2 minibatches; two model types; exact observation/selected replay/resume on tested current L4 cases. This is not a proof of all possible trajectories or historical identity.",
+  "remaining_limits": [
+    "Historical R1 feature tensors and GPU/software path not reconstructed",
+    "Historical calibration first divergent branch inferred, historical intermediates absent",
+    "R2 controls retain their own new-loop protocol; do not pool with this cohort",
+    "No SHD or other topology newly approved by this scoped freeze"
+  ]
+}

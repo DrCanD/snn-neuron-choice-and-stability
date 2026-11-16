@@ -1,0 +1,9 @@
+.sources/
+__pycache__/
+*.pyc
+.venv/
+data/
+outputs/
+*.pt
+*.npy
+*.h5

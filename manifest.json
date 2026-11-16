@@ -1,0 +1,20 @@
+{
+  "files": {
+    ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+    ".gitignore": "6f817dece58766606081039046b98bcc0164dec5e1817ca4b71ca9e2c3121c9d",
+    "configs/diat.json": "dd877cde4d70cb6d294681d4bc049131fc22ba2160c4c683a535b3d4aaa80141",
+    "configs/shd.json": "bd800920910e28731c752efd6421dddf92d351bf3812cd8fd4dc4eebd03af7b5",
+    "diat.py": "c6aada5271ae3e8c764bb0dd8f3fdb42b01ab795c6e8bfd6ceedbdf29fa15ed1",
+    "LICENSE": "9894e2668097aa9c9366959d222b2052a6d02d62c95c6daf55a6ad3f46a5a342",
+    "reference/bundle_manifest.json": "73de0879fdc0239d779462bbcc49a7264aab2b5029167551a2c3c8d5d94c0247",
+    "reference/definitions.json": "2aa68a0f45a50543fee200cd43aab13157a22ee479cf0aecb5e02790cd3df28b",
+    "reference/experiment_plan.json": "45de72253e62454fb66414784553c1b4eda30606ad657e3c8d4afbd4940fc24c",
+    "reference/reference_contract.json": "4108c1a50a6dad69ee5ef2ea1373fe678b91123ddfd4939b51369323f94a2f29",
+    "reference/reference_observer.py": "1e9d5e4f71938125d06c92f36bac81412c208b67c8676d541136c7e2106d399d",
+    "reference/run_frozen_reference.py": "d1247c6e758189640868cdfbd00e4c1bb22da0e472d2761bc5b1e68f808cdc8c",
+    "requirements.txt": "c6c178adb9c60cbea69b18bb16e5fc5698d15300889698c90cf22ecf1b3576e6",
+    "run.py": "315262d616731f4ccea8a079d9fac9debeebc896e688433884531ab90f8bc883",
+    "runtime.py": "98ffba660f8c5ddd98ed3ab0746fda3608e96996a11ee9c5a2d58f5e2cb70544",
+    "shd.py": "c7e7d72354f7e054b6dea5259a1ed7f1a724b6481f78a669c8bd91c81a6cc924"
+  }
+}

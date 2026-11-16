@@ -1,0 +1,62 @@
+{
+  "repositories": [
+    [
+      "repo",
+      "https://github.com/DrCanD/neuron-task-matching.git",
+      "96c2c484c45114afed21c0a7e768d3cba9b3c723"
+    ],
+    [
+      "neurons",
+      "https://github.com/DrCanD/dikmen-spiking-neurons.git",
+      "ebab00ac1a177ae08472db87ad5051f0d6ca7ebb"
+    ]
+  ],
+  "source_hashes": {
+    "experiments/02_diat_ablation.py": "bc39122be2b5a6437cd1cffa8342e4ed230a49cc2c8067844e3cc0073808f973",
+    "src/mstask/core.py": "69395e65ef80b226fbe19f3faf7c32c0ee974802bf1137419c4d5249f9b5fd9f",
+    "dikmen_neurons/base.py": "140dae1217293de3c82d588c95df73efd9d1ab425686a30acae870de864f893f",
+    "dikmen_neurons/ms_if/__init__.py": "b60adf5df5426197d8cd3c18093f1191c8cd07b341f7f9f35aa129d49ca2a9ba",
+    "experiments/04_best_model_search_full.py": "89fc5c1aeffb8e5b8d050255d28582926f7c3455b3c7793b3e57330169f902e9",
+    "experiments/07_shd_disjoint.py": "6b2a695a31fddf4f3a180ca5aaf2eb77d6077a102a6155e1eac75f09cc48d6db"
+  },
+  "raw_data_sha256": {
+    "X.npy": "1ed9f1f2f3e210430c5078d5da64572fb370ca0bffacd0f8b6385a5356425940",
+    "y.npy": "80fd08b91676035dd13a8f882beb2ae4b910bed96b8641cae17d2f5f16922e6d"
+  },
+  "split_sha256": {
+    "X_train": "912db0ba828aba57522725e0738f3853b85495064d328ffb115ba74abee1abb2",
+    "y_train": "404fa3717162a6998e9fbed0528a48a44b4493952dcd26792e76a3a5aa9f52f3",
+    "X_val": "894bf7038fade4554f2dfdbace8bc55e98a0d094edba6d135bd7578b16902e57",
+    "y_val": "ff290f1495882abde0f209c511702288ff8c20c9e0a0899ec2425ff18c68e877",
+    "X_test": "297bf9a93021b90aad1430b3ab12214e85af43239dbe5be5f31fb54f5d683cb3",
+    "y_test": "870c95693d0ac0e470cddfc2d6e93e74319624b4ff32d9c05eafc029e7cf9e76"
+  },
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.4.6",
+    "torch": "2.14.1+cu130",
+    "cuda_runtime": "13.0",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "cudnn": 92800
+  },
+  "flags": {
+    "matmul_tf32": true,
+    "cudnn_tf32": true,
+    "cudnn_benchmark": true,
+    "deterministic_algorithms": false
+  },
+  "config": {
+    "L": 4,
+    "W": 128,
+    "norm": "none",
+    "max_epochs": 200,
+    "patience": 20,
+    "val_frac": 0.15,
+    "val_smooth": 5,
+    "select_metric": "macro_f1",
+    "lr": 0.001,
+    "batch_size": 128,
+    "target_firing": 0.15,
+    "stft_window_diat": 16
+  }
+}
