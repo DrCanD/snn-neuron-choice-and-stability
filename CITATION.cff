@@ -7,14 +7,15 @@ authors:
     given-names: "İsmail Can"
   - family-names: "Karadağ"
     given-names: "Teoman"
-version: 0.1.0
-doi: 10.5281/zenodo.24285110
+version: 0.2.0
 date-released: 2026-11-16
 url: "https://github.com/DrCanD/snn-neuron-choice-and-stability"
 repository-code: "https://github.com/DrCanD/snn-neuron-choice-and-stability"
-license: MIT
+license:
+  - MIT
+  - Apache-2.0
 abstract: >-
-  Experiment runners for comparing spiking-neuron families, heterogeneous banks,
+  Original-study, supplementary and final-revision experiment runners for comparing spiking-neuron families, heterogeneous banks,
   input representations, and initialization stability on DIAT-μSAT radar and
   Spiking Heidelberg Digits. The package provides recorded configurations,
   pinned source and input fingerprints, numerical results, and model checkpoint

@@ -4,3 +4,6 @@ numpy==2.4.6
 scikit-learn==1.6.1
 scipy==1.16.3
 h5py==3.14.0
+# Historical search code used these lower bounds; old installed versions were not recorded.
+optuna>=3.0.0
+tqdm>=4.64.0

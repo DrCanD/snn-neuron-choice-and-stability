@@ -4,7 +4,6 @@ import hashlib
 import importlib.util
 import json
 import platform
-import subprocess
 import sys
 import types
 from pathlib import Path
@@ -30,32 +29,25 @@ def verify_package():
             raise RuntimeError(f'Pipeline source changed: {name}')
 
 
-def sources(cache):
+def sources(cache=None):
+    """Load bundled sources without network access or installation."""
     verify_package()
-    config = read(ROOT / 'configs/diat.json')
-    cache = Path(cache).resolve()
-    cache.mkdir(parents=True, exist_ok=True)
-    for name, url, commit in config['repositories']:
-        path = cache / name
-        if not path.exists():
-            subprocess.run(['git', 'clone', '--quiet', url, str(path)], check=True)
-            subprocess.run(['git', '-C', str(path), 'checkout', '--quiet', commit], check=True)
-        head = subprocess.check_output(['git', '-C', str(path), 'rev-parse', 'HEAD'], text=True).strip()
-        if head != commit or subprocess.check_output(['git', '-C', str(path), 'status', '--porcelain'], text=True).strip():
-            raise RuntimeError(f'Source checkout differs: {path}')
-    repo = cache / 'repo'
-    candidates = list((cache / 'neurons').glob('**/dikmen_neurons/__init__.py'))
-    if len(candidates) != 1:
-        raise RuntimeError('Ambiguous neuron package')
-    lib = candidates[0].parent
-    for name, expected in config['source_hashes'].items():
-        path = lib / name.removeprefix('dikmen_neurons/') if name.startswith('dikmen_neurons/') else repo / name
-        if sha(path) != expected:
-            raise RuntimeError(f'Source hash differs: {name}')
+    repo = ROOT / 'sources'
+    lib = repo / 'dikmen_neurons'
+    for name, expected in read(repo / 'provenance.json')['packaged_sha256'].items():
+        if sha(repo / name) != expected:
+            raise RuntimeError(f'Packaged source differs: {name}')
+    for name in ('dikmen_neurons', 'mstask'):
+        existing = sys.modules.get(name)
+        if existing is not None:
+            path = Path(getattr(existing, '__file__', '') or '.')
+            if not path.resolve().is_relative_to(repo.resolve()):
+                raise RuntimeError(f'Foreign {name} loaded; use a fresh process.')
     sys.dont_write_bytecode = True
     sys.path.insert(0, str(lib.parent))
     # Load pinned core without the upstream __init__ installer side effect.
     package = types.ModuleType('mstask')
+    package.__file__ = str(repo / 'src/mstask/__init__.py')
     package.__path__ = [str(repo / 'src/mstask')]
     sys.modules['mstask'] = package
     spec = importlib.util.spec_from_file_location('mstask.core', repo / 'src/mstask/core.py')

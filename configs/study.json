@@ -1,0 +1,215 @@
+{
+  "paper-shd-probe": {
+    "script": "01_shd_probe.py",
+    "input": "mixed",
+    "training_runs": 21,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "Original preliminary 15-epoch SHD probe; not the final ranking."
+  },
+  "paper-diat-ablation": {
+    "script": "02_diat_ablation.py",
+    "input": "diat",
+    "training_runs": 24,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "Original homogeneous, vertical, order-permuted and horizontal-bank ablation."
+  },
+  "paper-search": {
+    "script": "03_best_model_search.py",
+    "input": "diat",
+    "search_trials": 60,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "Preliminary Doppler/LIF search; trial pruning can end a trial early.",
+    "reevaluation_runs_range": [
+      6,
+      12
+    ],
+    "reevaluation_note": "Best-F1 plus a distinct firing-efficient configuration when present on the Pareto front."
+  },
+  "paper-search-cnn": {
+    "script": "04_best_model_search_full.py",
+    "input": "diat",
+    "search_trials": 90,
+    "cnn_runs": 5,
+    "seeds": [
+      42,
+      123,
+      999,
+      7,
+      2024
+    ],
+    "description": "Full Doppler/LIF/parametric-LIF search, selected configurations and CNN baseline.",
+    "reevaluation_runs_range": [
+      15,
+      30
+    ],
+    "reevaluation_note": "Best-F1 plus a distinct firing-efficient configuration when present on the Pareto front."
+  },
+  "paper-shd-mixed": {
+    "script": "05_shd_bakeoff.py",
+    "input": "mixed",
+    "training_runs": 24,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "Eight homogeneous neuron families on the archived mixed-speaker SHD cache."
+  },
+  "paper-diat-ranking": {
+    "script": "06_close_2x2.py",
+    "input": "diat",
+    "training_runs": 9,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "DIAT Doppler, CrossInhib and Phase comparisons."
+  },
+  "paper-shd-official": {
+    "script": "07_shd_disjoint.py",
+    "input": "shd",
+    "training_runs": 24,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "Eight-family SHD ranking on the official split; not fully speaker-disjoint."
+  },
+  "S1_cap_sweep": {
+    "stage": "S1_cap_sweep",
+    "input": "diat",
+    "training_runs": 45,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "Vanilla/parametric/Doppler capacity sweep at five widths."
+  },
+  "S2_regime": {
+    "stage": "S2_regime",
+    "input": "diat",
+    "training_runs": 24,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "Parameter-matched regimes, unit-matched bank and stable bank."
+  },
+  "S3_rescue": {
+    "stage": "S3_rescue",
+    "input": "diat",
+    "training_runs": 15,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "CrossInhib initialization/learning-rate controls and STFT/Phase diagnostics."
+  },
+  "S4_shd": {
+    "stage": "S4_shd",
+    "input": "shd",
+    "training_runs": 9,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "SHD Doppler and library/stable CrossInhib with parameter diagnostics."
+  },
+  "S6_seeds": {
+    "stage": "S6_seeds",
+    "input": "both",
+    "training_runs": 12,
+    "seeds": [
+      7,
+      2024
+    ],
+    "description": "Two additional seeds for three families on both domains."
+  },
+  "S7_signal": {
+    "stage": "S7_signal",
+    "input": "both",
+    "training_runs": 18,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "DIAT first-difference and SHD cumulative input representations."
+  },
+  "S8_diat": {
+    "stage": "S8_diat",
+    "input": "diat",
+    "training_runs": 21,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "sweep_seeds": [
+      42
+    ],
+    "description": "DIAT temporal pooling and the six-coupling stability sweep."
+  },
+  "S8_shd": {
+    "stage": "S8_shd",
+    "input": "shd",
+    "training_runs": 9,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "SHD at 64 temporal bins."
+  },
+  "S9_lifdiff": {
+    "stage": "S9_lifdiff",
+    "input": "diat",
+    "training_runs": 6,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "Vanilla/parametric LIF on DIAT first differences."
+  },
+  "S9_initfix": {
+    "stage": "S9_initfix",
+    "input": "both",
+    "training_runs": 15,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "STFT and dual-tau initialization controls on both domains."
+  },
+  "S9_shd_rank": {
+    "stage": "S9_shd_rank",
+    "input": "shd",
+    "training_runs": 21,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "description": "Six remaining original SHD families plus parametric LIF; Doppler/CrossInhib are in S4."
+  }
+}

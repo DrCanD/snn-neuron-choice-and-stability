@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.2.0 — 2026-11-16
+
+Complete the experiment-code scope beyond the revision controls included in 0.1.0.
+
+- Add all seven original experiment programs: ablation, search/CNN, mixed/official SHD, and cross-domain ranking programs.
+- Add S1–S9 supplementary definitions: 195 experiment runs and numerical S5 analysis.
+- Bundle required model sources with provenance hashes and original MIT/Apache-2.0 attribution.
+- Add numerical SHD contrast and paired equivalence analyses; no tables or figures.
+- Require real inputs, protect fresh outputs, preserve historical stage order, and reject unsupported legacy resume.
+- Document missing historical data-preparation sources and environment limits explicitly.
+
+Existing research results and frozen revision computation remain unchanged. Validation is offline, with training operations blocked. No new training or end-to-end GPU rerun was performed.
+
 ## 0.1.0 — 2026-11-16
 
 Initial packaged release of the DIAT and SHD revision experiment runners.

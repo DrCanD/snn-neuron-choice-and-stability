@@ -1,0 +1,46 @@
+{
+  "neuron_task_matching_commit": "96c2c484c45114afed21c0a7e768d3cba9b3c723",
+  "neuron_library_commit": "ebab00ac1a177ae08472db87ad5051f0d6ca7ebb",
+  "adaptations": [
+    "Local source imports; no install or Drive mounting.",
+    "Explicit input/output paths; real data required in every environment.",
+    "Plot blocks and manuscript formatting omitted.",
+    "Training/model/optimizer/calibration definitions retained.",
+    "Legacy S1-S9 numerical stages included; S5 statistics retain JSON only."
+  ],
+  "upstream_sha256": {
+    "src/mstask/core.py": "69395e65ef80b226fbe19f3faf7c32c0ee974802bf1137419c4d5249f9b5fd9f",
+    "dikmen_neurons/base.py": "11c892651a1f7df55d027083925227cf279a1f46b180a66e56aeccc78b359e3f",
+    "dikmen_neurons/ms_if/__init__.py": "9cf4e1a62e4ba2c2b7a93dcd2db0c938956ce6e47758f885c031f334f9cb1106",
+    "experiments/01_shd_probe.py": "e428c0a84450327a1f23560884edcd2d82f8bac11b8a677b4108b25630ed103f",
+    "experiments/02_diat_ablation.py": "bc39122be2b5a6437cd1cffa8342e4ed230a49cc2c8067844e3cc0073808f973",
+    "experiments/03_best_model_search.py": "01817d8243f6747cb6ca13cc2c67e8243ba9bd12302fc4a93dc022373eed2084",
+    "experiments/04_best_model_search_full.py": "89fc5c1aeffb8e5b8d050255d28582926f7c3455b3c7793b3e57330169f902e9",
+    "experiments/05_shd_bakeoff.py": "2fda13b5b3e94986cbbe529b7c2cb5768983a8fadb3ea1ecd706480c8bea2bc9",
+    "experiments/06_close_2x2.py": "e6157a2817c4fd2b958a9137247004733072365832a43b339f01c7fe4b3b4776",
+    "experiments/07_shd_disjoint.py": "6b2a695a31fddf4f3a180ca5aaf2eb77d6077a102a6155e1eac75f09cc48d6db",
+    "supplementary_notebook_source": "8587e9b2a0a078526d0a63b0622cd839a1dd09efc96716734d62d1d731bea3ae",
+    "shd_statistics_source": "9e272952bf7fc701e1542c3d05634d3f7661a9d6b18fe5025eaa3f8b68bd12da"
+  },
+  "packaged_sha256": {
+    "dikmen_neurons/__init__.py": "8a6463fe65c328e3d578ed97cec10b1efb4f6879dab9af754be0655a65322b03",
+    "dikmen_neurons/base.py": "11c892651a1f7df55d027083925227cf279a1f46b180a66e56aeccc78b359e3f",
+    "dikmen_neurons/CITATION.cff": "87b0a8f63c96eb9a4e27c0f89ab9a6c5f141c02e164f1a9151297738f0a4cb6e",
+    "dikmen_neurons/LICENSE": "b37edc9ac913c65e8ab8429c89054f6eacb0d6e051e8ea70fc49fa328c3ffa00",
+    "dikmen_neurons/ms_if/__init__.py": "9cf4e1a62e4ba2c2b7a93dcd2db0c938956ce6e47758f885c031f334f9cb1106",
+    "dikmen_neurons/NOTICE": "02fcc0fdc61bc13dec71c94ae7d8a61b5c1229ed37f3792d2c72ee9cd120e12d",
+    "experiments/01_shd_probe.py": "f3b30176c5cec553ff51f0e7216a1235ba93ea6122e4b625a2afa4d588e7b05f",
+    "experiments/02_diat_ablation.py": "e81058469b622a8552667599637f30042343d112b6449ab2596cb4e7b98533f4",
+    "experiments/03_best_model_search.py": "afabe5e97dbc47cc0f6f247d3ddd10add79c1cd57a8ce704f3c9c53a35761927",
+    "experiments/04_best_model_search_full.py": "b82ebc344d682e16c976b406306d5fae9e01cac6b3b2c3e9752f5b253c382718",
+    "experiments/05_shd_bakeoff.py": "9c3bc2bbecd0e1c47ad32dffd662f45306c0ef5abdd9f240f1896a84840af285",
+    "experiments/06_close_2x2.py": "d61bcfcd07ef913a4bf6d87247340705914041292c95e9f0bb85c89d71c01c02",
+    "experiments/07_shd_disjoint.py": "4337d5b8560df67a2af5e075be6732504150be9aee81f0f3c34b4418be91f7a1",
+    "experiments/supplementary.py": "e65b7af25c3bbc5df2be638acdea769df207473d4bb30135d7515961505e2b25",
+    "experiments/supplementary_statistics.py": "8ec03a57e40b6e0a00a88f178457ec0c723905b638847ca423627c2d6a7b01fb",
+    "LICENSE": "87caf470a96a991c41337253a6a603c0d26bc9f470f07b62de6cb82787463c1c",
+    "shd_statistics.py": "ef0c273bb3064b5f77ca392cecf2a7123186bc6c38bf15e290dc935fa96e882a",
+    "src/mstask/__init__.py": "e123dbdfcfb57b772a2fbc16cd97dd3b5032af712a18c24ecb3b7c483e923866",
+    "src/mstask/core.py": "69395e65ef80b226fbe19f3faf7c32c0ee974802bf1137419c4d5249f9b5fd9f"
+  }
+}

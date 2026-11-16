@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this software in academic work, please cite it as below."
+type: software
+title: "Dikmen Spiking Neuron Families"
+version: 1.2.0
+date-released: 2026-04-23
+license: Apache-2.0
+url: "https://github.com/candikmen/dikmen-spiking-neurons"
+repository-code: "https://github.com/candikmen/dikmen-spiking-neurons"
+authors:
+  - family-names: Dikmen
+    given-names: "İsmail Can"
+    orcid: "https://orcid.org/0000-0002-7747-7777"
+    affiliation: "İstinye University, Istanbul, Turkey"
+keywords:
+  - spiking neural network
+  - neuromorphic computing
+  - leaky integrate-and-fire
+  - hazard function
+  - quantum tunneling neuron
+  - edge AI
+  - battery management
+  - ISAC
+  - cardiac signal processing
+  - ECG arrhythmia detection
+abstract: >-
+  A modular PyTorch library of 39 spiking neuron models across 8 families
+  (H-LIF, MS-IF, Liquid, I-LIF, F-LIF, K-LIF, W-LIF, C-LIF) for neuromorphic
+  edge computing research. Each family explores a different axis of spike
+  generation, from hazard-based threshold mechanisms to information-theoretic,
+  fractional-order, control-theoretic, transform-domain, and cardiac-biophysical
+  approaches.
+preferred-citation:
+  type: software
+  title: "Dikmen Spiking Neuron Families: 39 Models for Neuromorphic Edge Computing"
+  authors:
+    - family-names: Dikmen
+      given-names: "İsmail Can"
+      orcid: "https://orcid.org/0000-0002-7747-7777"
+  year: 2026
+  url: "https://github.com/candikmen/dikmen-spiking-neurons"
