@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.13.16](https://img.shields.io/badge/Python-3.13.16-3776AB.svg)](requirements.txt)
 [![Release](https://img.shields.io/github/v/release/DrCanD/snn-neuron-choice-and-stability)](https://github.com/DrCanD/snn-neuron-choice-and-stability/releases)
-[![DOI](https://zenodo.org/badge/1460193939.svg)](https://zenodo.org/badge/latestdoi/1460193939)
+[![DOI](https://zenodo.org/badge/1460193939.svg)](https://doi.org/10.5281/zenodo.24285109)
 
 This repository packages the completed revision experiments on **DIAT-μSAT radar** and **Spiking Heidelberg Digits (SHD)**. A single command-line entry point selects an experiment and seed. Each run writes numerical results, validation histories, predictions, and model checkpoints.
 
@@ -138,6 +138,9 @@ manifest.json      Executable/configuration file fingerprints
 ## Citation
 
 Use the **Zenodo DOI badge** above to cite an archived software release. GitHub's **Cite this repository** action uses [CITATION.cff](CITATION.cff). Cite the version you actually used, and cite the original datasets separately.
+
+- **All versions:** [10.5281/zenodo.24285109](https://doi.org/10.5281/zenodo.24285109)
+- **Version 0.1.0:** [10.5281/zenodo.24285110](https://doi.org/10.5281/zenodo.24285110)
 
 The software archive and its DOI identify the code release, not a new experimental dataset or a completed GPU rerun.
 

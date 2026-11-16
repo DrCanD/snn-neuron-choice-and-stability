@@ -8,6 +8,7 @@ authors:
   - family-names: "Karadağ"
     given-names: "Teoman"
 version: 0.1.0
+doi: 10.5281/zenodo.24285110
 date-released: 2026-11-16
 url: "https://github.com/DrCanD/snn-neuron-choice-and-stability"
 repository-code: "https://github.com/DrCanD/snn-neuron-choice-and-stability"
